@@ -1,22 +1,17 @@
 package cycleFactory;
-import Cycles.*;
+import cycles.*;
 public class CycleFactory {
     public Cycle createCycle(CycleType c) {
-        if(c.equals(CycleType.TRICYCLE)) {
-            return new Tricycle();
-        }
-        else {
-            if(c.equals(CycleType.BICYCLE)) {
+        switch (c){
+            case TRICYCLE:
+                return new Tricycle();
+            case BICYCLE:
                 return new Bicycle();
-            }
-            else{
-                if(c.equals(CycleType.UNICYCLE)) {
-                    return new Unicycle();
-                }
-                else {
-                    return null;
-                }
-            }
+            case UNICYCLE:
+                return new Unicycle();
+            default:
+                return null;
         }
+
     }
 }

@@ -1,6 +1,6 @@
-package Cycles;
-
-public class Tricycle implements cycleFactory.Cycle {
+package cycles;
+import cycleFactory.Cycle;
+public class Tricycle implements Cycle {
     @Override
     public void print() {
         System.out.println("Tricycle");
