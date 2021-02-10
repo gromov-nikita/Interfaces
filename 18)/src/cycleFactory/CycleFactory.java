@@ -10,8 +10,7 @@ public class CycleFactory {
             case UNICYCLE:
                 return new Unicycle();
             default:
-                return null;
+                throw new UnsupportedOperationException();
         }
-
     }
 }
